@@ -49,6 +49,9 @@ python manage.py runserver
 Your project will now be accessible at http://127.0.0.1:8000/ in your browser.
 
 
+register and create new user name and password then login
+
+
 
 
 
