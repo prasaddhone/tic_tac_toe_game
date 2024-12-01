@@ -15,7 +15,10 @@ Before running the project, ensure you have the following installed on your mach
 - [Git](https://git-scm.com/)
 
 ## Setting Up the Project
-Open in terminal then run the following command:
+1)download and extract zip file
+2)open the tic_tac_toe_game-main folder
+3)then click on folder address bar select full address and type cmd
+4)then run the following command:
 
 Create a Virtual Environment
 ```bash
