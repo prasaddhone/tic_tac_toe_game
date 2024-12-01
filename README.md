@@ -17,19 +17,27 @@ Before running the project, ensure you have the following installed on your mach
 ## Setting Up the Project
 
 Create a Virtual Environment
+```bash
 python -m venv venv
-
+```
 Activate the Virtual Environment
+```bash
 .\venv\Scripts\activate
-
+```
 Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
 Apply Database Migrations
+```bash
 python manage.py migrate
+```
 
 Run the Development Server
+```bash
 python manage.py runserver
+```
 
 Your project will now be accessible at http://127.0.0.1:8000/ in your browser.
 
