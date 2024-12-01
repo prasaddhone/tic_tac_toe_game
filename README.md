@@ -15,7 +15,7 @@ Before running the project, ensure you have the following installed on your mach
 - [Git](https://git-scm.com/)
 
 ## Setting Up the Project
-Open terminal following:
+Open in terminal then run the following command:
 
 Create a Virtual Environment
 ```bash
