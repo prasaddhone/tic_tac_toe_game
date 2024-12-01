@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align everything to the top */
+    height: 100vh; /* Full viewport height */
+}
+
+#page-container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px; /* Limit the max width of the content */
+}
+
+/* Title (h1) and Player Info */
+h1 {
+    font-size: 3em;
+    margin-top: 20px; /* Space from the top */
+}
+
+#player-info p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Game-Leaderboard Container (Flexbox) */
+#game-leaderboard-container {
+    display: flex;
+    justify-content: center; /* Center both elements */
+    align-items: flex-start;
+    gap: 20px; /* Reduced space between game board and leaderboard */
+    margin-top: 40px;
+}
+
+/* Game Board */
+#game-board table {
+    width: 300px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#game-board td {
+    width: 33%;
+    height: 100px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* Reset Button */
+#controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Leaderboard */
+#leaderboard {
+    width: 250px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#leaderboard h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em; /* Smaller font size */
+}
+
+#leaderboard th, #leaderboard td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#leaderboard th {
+    background-color: #f4f4f4;
+}
+
+/* Optional: Add a max height with overflow scrolling for leaderboard */
+#leaderboard table {
+    max-height: 200px;
+    overflow-y: auto;
+    display: block;
+}

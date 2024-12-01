@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div id="page-container">
+        <h1>Tic-Tac-Toe</h1>
+
+        <!-- Player Info Section -->
+        <div id="player-info">
+            <p>Player: {{ user.username }}</p>
+        </div>
+
+        <!-- Game and Leaderboard Section -->
+        <div id="game-leaderboard-container">
+            <!-- Game Board Section -->
+            <div id="game-board">
+                <table>
+                    <tr>
+                        <td id="cell-0" class="cell" onclick="makeMove(0)"></td>
+                        <td id="cell-1" class="cell" onclick="makeMove(1)"></td>
+                        <td id="cell-2" class="cell" onclick="makeMove(2)"></td>
+                    </tr>
+                    <tr>
+                        <td id="cell-3" class="cell" onclick="makeMove(3)"></td>
+                        <td id="cell-4" class="cell" onclick="makeMove(4)"></td>
+                        <td id="cell-5" class="cell" onclick="makeMove(5)"></td>
+                    </tr>
+                    <tr>
+                        <td id="cell-6" class="cell" onclick="makeMove(6)"></td>
+                        <td id="cell-7" class="cell" onclick="makeMove(7)"></td>
+                        <td id="cell-8" class="cell" onclick="makeMove(8)"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Leaderboard Section -->
+            <div id="leaderboard">
+                <h2>Leaderboard</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Wins</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for player in top_players %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ player.username }}</td>
+                            <td>{{ player.wins }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Reset Button Section -->
+        <div id="controls">
+            <button onclick="resetBoard()">Reset Game</button>
+        </div>
+    </div>
+
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
